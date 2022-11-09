@@ -122,3 +122,35 @@ h1 span:nth-child(8) {
         opacity: 1;
     }
 }
+
+.text {
+    position: absolute;
+    top: 111px;
+    left: 100px;
+    height: 60px;
+    width: 260px;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+    overflow: hidden;
+    /* background-color: rgb(103, 182, 25); */
+}
+
+.text::before {
+    display: block;
+    position: absolute;
+    top: -60px;
+    left: 0;
+    content: '01/01/2023';
+    animation: slide-text 1s 3s forwards;
+}
+
+@keyframes slide-text {
+    from {
+        top: -60px;
+    }
+
+    to {
+        top: 10px;
+    }
+}
